@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: A minimal example of using markdown with fastpages.
+description: A complete tutorial of building an ML application that helps you remove watermarks.
 categories: [markdown]
 title: Going from idea to a Data driven Application
 ---
@@ -130,9 +130,7 @@ parallel(AddWatermark('path/to/input', 'path/to/output'), il.items)
 This function then parallelizes the process and quickly adds watermark to all the images in dataset.
 Now the input for our model becomes the output image from the previous function (watermark added images) and the target image is the original un-watermarked image.
 
-```
 {% include alert.html text="A lot of images will not be 3 channel RGB images, some would be either only two channels or corrupt; try to keep Image open and resize/convert call in a try-except block." %}
-```
 
 
 
@@ -165,9 +163,8 @@ learn_gen = unet_learner(data_gen, arch, wd=1e-3, blur=True, norm_type=NormType.
 
 Note that `MSELossFlat` is similar to PyTorch's `nn.MSELoss` but flattens input and target. So, that gives us `Learner` object to start model training.
 
-```
+
 {% include info.html text="I have created the model with input size fixed at (128, 128), if you have better resources available try an even bigger size 256 or even 512." %}
-```
 
 ## Training the model
 
@@ -187,9 +184,9 @@ Once you have the model ready save it to disk, copy it to your local machine in 
 learn_gen.export('wm_model')
 ```
 
-```
+
 {% include info.html text="Note that `learn_gen.save` won't work in case you want to run inference on your local machine but use `learn_gen.export` instead." %}
-```
+
 
 ## Checking model performance
 
@@ -214,7 +211,7 @@ Here are the input and output images
 ![watermark added]({{ site.baseurl }}/images/watermark_added.jpg "Input Image to Model")
 ![Watermark removed from model]({{ site.baseurl }}/images/output.jpg "Output Image")
 
-The model actually performs well and is able to remove alpha channel watermark with a good precision.
+The model actually performs well and is able to remove alpha channel watermark with a good precision. The image is downsized and is 128 by 128 pixels owing to limited resources of my machine while training the model.
 
 ## Creating a web app
 
