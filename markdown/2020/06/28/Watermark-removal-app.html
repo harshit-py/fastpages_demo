@@ -119,9 +119,9 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h2"><a href="#training-the-model">Training the model</a></li>
 <li class="toc-entry toc-h2"><a href="#checking-model-performance">Checking model performance</a></li>
-<li class="toc-entry toc-h2"><a href="#creating-a-web-app">Creating a web app</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h1"><a href="#creating-a-web-app">Creating a web app</a></li>
 <li class="toc-entry toc-h1"><a href="#concluding-note">Concluding Note</a></li>
 </ul><h1 id="intro">
 <a class="anchor" href="#intro" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intro</h1>
@@ -328,8 +328,8 @@ Now the input for our model becomes the output image from the previous function 
 
 <p>The model actually performs well and is able to remove alpha channel watermark with a good precision. The image is downsized and is 128 by 128 pixels owing to limited resources of my machine while training the model.</p>
 
-<h2 id="creating-a-web-app">
-<a class="anchor" href="#creating-a-web-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating a web app</h2>
+<h1 id="creating-a-web-app">
+<a class="anchor" href="#creating-a-web-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating a web app</h1>
 
 <p>Deploying ML is one of the most talked about and yet the least explored part of the overall pipeline. One which is either dependent on separate deployment team after you’ve container-ised your app, or as a batch job which gets called by a cron job at a specified time. Either way, this takes away a lot of ownership and creates a void in the feedback loop of an ML monitoring systems, which is, at least as important as training lifecycle, if not more. Data driven apps require a robust feedback loop to quickly identify falling model performace and implement quick iterations to re-train models in production.
 This part is one of the most exciting part, getting your trained model to produce results and expose it as an API. Exciting because it lets you use the model as a service, and, of course, you can design a useful front-end to make it look inviting. I’ll be using Flask to create a simple interface to interact with your app.</p>
