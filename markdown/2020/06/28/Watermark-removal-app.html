@@ -7,30 +7,30 @@
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="Going from idea to a Data driven Application" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A minimal example of using markdown with fastpages." />
-<meta property="og:description" content="A minimal example of using markdown with fastpages." />
+<meta name="description" content="A complete tutorial of building an ML application that helps you remove watermarks." />
+<meta property="og:description" content="A complete tutorial of building an ML application that helps you remove watermarks." />
 <link rel="canonical" href="https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html" />
 <meta property="og:url" content="https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html" />
 <meta property="og:site_name" content="Harshit Saxena" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-28T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"A minimal example of using markdown with fastpages.","@type":"BlogPosting","headline":"Going from idea to a Data driven Application","dateModified":"2020-06-28T00:00:00-05:00","datePublished":"2020-06-28T00:00:00-05:00","url":"https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html"},"@context":"https://schema.org"}</script>
+{"description":"A complete tutorial of building an ML application that helps you remove watermarks.","@type":"BlogPosting","headline":"Going from idea to a Data driven Application","dateModified":"2020-06-28T00:00:00-05:00","datePublished":"2020-06-28T00:00:00-05:00","url":"https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastpages_demo/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://harshit-py.github.io/fastpages_demo/feed.xml" title="Harshit Saxena" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages_demo/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Going from idea to a Data driven Application | Harshit Saxena</title>
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="Going from idea to a Data driven Application" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A minimal example of using markdown with fastpages." />
-<meta property="og:description" content="A minimal example of using markdown with fastpages." />
+<meta name="description" content="A complete tutorial of building an ML application that helps you remove watermarks." />
+<meta property="og:description" content="A complete tutorial of building an ML application that helps you remove watermarks." />
 <link rel="canonical" href="https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html" />
 <meta property="og:url" content="https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html" />
 <meta property="og:site_name" content="Harshit Saxena" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-28T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"A minimal example of using markdown with fastpages.","@type":"BlogPosting","headline":"Going from idea to a Data driven Application","dateModified":"2020-06-28T00:00:00-05:00","datePublished":"2020-06-28T00:00:00-05:00","url":"https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html"},"@context":"https://schema.org"}</script>
+{"description":"A complete tutorial of building an ML application that helps you remove watermarks.","@type":"BlogPosting","headline":"Going from idea to a Data driven Application","dateModified":"2020-06-28T00:00:00-05:00","datePublished":"2020-06-28T00:00:00-05:00","url":"https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -85,7 +85,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Going from idea to a Data driven Application</h1><p class="page-description">A minimal example of using markdown with fastpages.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-28T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Going from idea to a Data driven Application</h1><p class="page-description">A complete tutorial of building an ML application that helps you remove watermarks.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-28T00:00:00-05:00" itemprop="datePublished">
         Jun 28, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -242,12 +242,10 @@ Here I wrap up the watermark logic into a callable object which is then called w
 <p>This function then parallelizes the process and quickly adds watermark to all the images in dataset.
 Now the input for our model becomes the output image from the previous function (watermark added images) and the target image is the original un-watermarked image.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="Toast Toast--warning googoo"&gt;
-   &lt;span class="Toast-icon"&gt;&lt;svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;
-   &lt;span class="Toast-content"&gt;A lot of images will not be 3 channel RGB images, some would be either only two channels or corrupt; try to keep Image open and resize/convert call in a try-except block.&lt;/span&gt;
-&lt;/div&gt;
-
-</code></pre></div></div>
+<div class="Toast Toast--warning googoo">
+   <span class="Toast-icon"><svg class="octicon octicon-alert" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>
+   <span class="Toast-content">A lot of images will not be 3 channel RGB images, some would be either only two channels or corrupt; try to keep Image open and resize/convert call in a try-except block.</span>
+</div>
 
 <h1 id="creating-the-model">
 <a class="anchor" href="#creating-the-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating the Model</h1>
@@ -276,12 +274,10 @@ Now the input for our model becomes the output image from the previous function 
 
 <p>Note that <code class="highlighter-rouge">MSELossFlat</code> is similar to PyTorch’s <code class="highlighter-rouge">nn.MSELoss</code> but flattens input and target. So, that gives us <code class="highlighter-rouge">Learner</code> object to start model training.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="Toast"&gt;
-   &lt;span class="Toast-icon"&gt;&lt;svg class="octicon octicon-info" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;
-   &lt;span class="Toast-content"&gt;I have created the model with input size fixed at (128, 128), if you have better resources available try an even bigger size 256 or even 512.&lt;/span&gt;
-&lt;/div&gt;
-
-</code></pre></div></div>
+<div class="Toast">
+   <span class="Toast-icon"><svg class="octicon octicon-info" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>
+   <span class="Toast-content">I have created the model with input size fixed at (128, 128), if you have better resources available try an even bigger size 256 or even 512.</span>
+</div>
 
 <h2 id="training-the-model">
 <a class="anchor" href="#training-the-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training the model</h2>
@@ -303,12 +299,10 @@ Now the input for our model becomes the output image from the previous function 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">learn_gen</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s">'wm_model'</span><span class="p">)</span>
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="Toast"&gt;
-   &lt;span class="Toast-icon"&gt;&lt;svg class="octicon octicon-info octicon octicon-info" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;
-   &lt;span class="Toast-content"&gt;Note that `learn_gen.save` won't work in case you want to run inference on your local machine but use `learn_gen.export` instead.&lt;/span&gt;
-&lt;/div&gt;
-
-</code></pre></div></div>
+<div class="Toast">
+   <span class="Toast-icon"><svg class="octicon octicon-info octicon octicon-info" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>
+   <span class="Toast-content">Note that `learn_gen.save` won't work in case you want to run inference on your local machine but use `learn_gen.export` instead.</span>
+</div>
 
 <h2 id="checking-model-performance">
 <a class="anchor" href="#checking-model-performance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Checking model performance</h2>
@@ -332,7 +326,7 @@ Now the input for our model becomes the output image from the previous function 
 <p><img src="/fastpages_demo/images/watermark_added.jpg" alt="watermark added" title="Input Image to Model">
 <img src="/fastpages_demo/images/output.jpg" alt="Watermark removed from model" title="Output Image"></p>
 
-<p>The model actually performs well and is able to remove alpha channel watermark with a good precision.</p>
+<p>The model actually performs well and is able to remove alpha channel watermark with a good precision. The image is downsized and is 128 by 128 pixels owing to limited resources of my machine while training the model.</p>
 
 <h2 id="creating-a-web-app">
 <a class="anchor" href="#creating-a-web-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating a web app</h2>
