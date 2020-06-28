@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Going from idea to a Data driven Application | Harshit Saxena</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Going from idea to a Data driven Application" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A minimal example of using markdown with fastpages." />
+<meta property="og:description" content="A minimal example of using markdown with fastpages." />
+<link rel="canonical" href="https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html" />
+<meta property="og:url" content="https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html" />
+<meta property="og:site_name" content="Harshit Saxena" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-28T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"A minimal example of using markdown with fastpages.","@type":"BlogPosting","headline":"Going from idea to a Data driven Application","dateModified":"2020-06-28T00:00:00-05:00","datePublished":"2020-06-28T00:00:00-05:00","url":"https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages_demo/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://harshit-py.github.io/fastpages_demo/feed.xml" title="Harshit Saxena" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages_demo/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Going from idea to a Data driven Application | Harshit Saxena</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Going from idea to a Data driven Application" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A minimal example of using markdown with fastpages." />
+<meta property="og:description" content="A minimal example of using markdown with fastpages." />
+<link rel="canonical" href="https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html" />
+<meta property="og:url" content="https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html" />
+<meta property="og:site_name" content="Harshit Saxena" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-28T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"A minimal example of using markdown with fastpages.","@type":"BlogPosting","headline":"Going from idea to a Data driven Application","dateModified":"2020-06-28T00:00:00-05:00","datePublished":"2020-06-28T00:00:00-05:00","url":"https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://harshit-py.github.io/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://harshit-py.github.io/fastpages_demo/feed.xml" title="Harshit Saxena" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages_demo/">Harshit Saxena</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/fastpages_demo/about/">About Me</a><a class="page-link" href="/fastpages_demo/search/">Search</a><a class="page-link" href="/fastpages_demo/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Going from idea to a Data driven Application</h1><p class="page-description">A minimal example of using markdown with fastpages.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-28T00:00:00-05:00" itemprop="datePublished">
+        Jun 28, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      15 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/fastpages_demo/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#intro">Intro</a></li>
+<li class="toc-entry toc-h1"><a href="#setting-up-project">Setting up project</a></li>
+<li class="toc-entry toc-h1"><a href="#getting-data">Getting data</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#watermarking-images">Watermarking Images</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#creating-the-model">Creating the Model</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#training-the-model">Training the model</a></li>
+<li class="toc-entry toc-h2"><a href="#checking-model-performance">Checking model performance</a></li>
+<li class="toc-entry toc-h2"><a href="#creating-a-web-app">Creating a web app</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#concluding-note">Concluding Note</a></li>
+</ul><h1 id="intro">
+<a class="anchor" href="#intro" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intro</h1>
+
+<p>I had recently completed a couple of online courses on Deep Learning including Practical Deep Learning for Coders by FastAI V3 and <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/EHSHBQWMBH8R">TensorFlow in Practice Specialization</a> from DeepLearning.ai and wanted to try out a project with a real world application and not classifiying digits or cats and dogs. So, one of the things that piqued my interest was using U-Net with pre-trained encoder to basically remove artifacts from photos. This was discussed in Lesson 7 part 1 of FAST AI course. The idea was to use a Non GAN approach to this problem. The idea could be used to either remove physical photo artifacts from digital scans or removing watermark from photos.
+So in this article I’ll take you through the complete ML pipeline; starting from idea, collecting data, training model and serving it. We will train an ML model to remove watermark from images. The complete pipeline is in Python with ML models trained in Fast AI (built on PyTorch) and served using Flask.
+Also, throughout the article I’ll add a challenges tab to list out challenges in each step.</p>
+
+<h1 id="setting-up-project">
+<a class="anchor" href="#setting-up-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting up project</h1>
+<p>If you’d like to follow along, I recommend using <a href="https://drivendata.github.io/cookiecutter-data-science/">Cookiecutter for data science</a>. This project structure helps you in maintaining all the data versions, temporary outputs, analyses notebooks etc. in a concise manner and could also help you in version controlling.
+In your venv or conda environment do</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>cookiecutter
+</code></pre></div></div>
+
+<p>and then</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cookiecutter https://github.com/drivendata/cookiecutter-data-science
+</code></pre></div></div>
+<p>This will set up a directory structure that will help you in almost all Data Science/Machine Learning projects. For more info, visit their documentation. Our data structure looks like this (after removing unecessary folders)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── LICENSE
+├── README.md          &lt;- The top-level README for developers using this project.
+│
+├── data
+│
+├── models             &lt;- Trained and serialized models, model predictions, or model summaries
+│
+├── notebooks          &lt;- Jupyter notebooks. Naming convention is a number (for ordering),
+│                         the creator's initials, and a short `-` delimited description, e.g.
+│                         `1.0-jqp-initial-data-exploration`.
+│
+│
+├── requirements.txt   &lt;- The requirements file for reproducing the analysis environment, e.g.
+│                         generated with `pip freeze &gt; requirements.txt`
+├── src                &lt;- Source code for use in this project.
+│   ├── __init__.py    &lt;- Makes src a Python module
+│   │
+│   ├── models         &lt;- Scripts to train models and then use trained models to make
+│   │   │                 predictions
+│   │   ├── predict_model.py
+│   │   └── train_model.py
+│   │
+│   ├── web deploy	   &lt;- Flask app detailed below
+└── tox.ini            &lt;- tox file with settings for running tox; see tox.testrun.org
+</code></pre></div></div>
+
+<h1 id="getting-data">
+<a class="anchor" href="#getting-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting data</h1>
+
+<p>Preparing training data for any ML based product is actually the hardest part in ML pipelines. If it’s a classification problem getting labelled data is one of the foremost challenges. Some workarounds in these cases are using pre-trained models and use transfer learning. Luckily, in our case getting/preparing data is actually an easy process. For our model, the input is going to be an image with a watermark overlayed and target is going to be the same image without any watermark. This can be simply acheived by adding watermarks on any publicly available image dataset. However, you’ll need to pay attention to the kind of dataset you choose. If you intend to build a watermark removal for documents, the training dataset needs to be made up of scanned documents and you can find a lot many publicaly available datasets. Here we’re going to use <a href="https://www.robots.ox.ac.uk/~vgg/data/pets/">Oxford IIIT Pets Dataset</a> that has a lot many use cases including foreground-background segmentation truth, boundingboxes for pet detection etc. But we’ll primarily use this to create our own dataset of watermarked images.</p>
+
+<h2 id="watermarking-images">
+<a class="anchor" href="#watermarking-images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Watermarking Images</h2>
+
+<p>Selecting a watermark is as crucial as selecting the dataset. You can chose to add random texts in different colours all over your image or you can chose to add alpha channel watermarks that keep alpha trasparency in the final watermarked images. It depends on the final application but keep in mind the final trained model will only be able to remove artifacts that it has seen during training or that closely resembles watermarks from the training data.
+To give an example of how to add an alpha channel watermark to an image, select an image with an alpha channel transparency (PNG), like <a href="https://favpng.com/png_view/symbol-copyright-symbol-registered-trademark-symbol-png/9ttjUKMB">this</a>, and add it over on alpha channel on your RGB image (which by default doesn’t have any alpha channel).</p>
+
+<p>Import image and watermark</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">PIL</span>
+<span class="n">wm</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="s">'path/to/watermark'</span><span class="p">)</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="s">'path/to/original/image'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>create a mask for  watermark image</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mask</span> <span class="o">=</span> <span class="n">wm</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s">'L'</span><span class="p">)</span><span class="o">.</span><span class="n">point</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">min</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">25</span><span class="p">))</span>
+<span class="n">wm</span><span class="o">.</span><span class="n">putalpha</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Resize the watermark according to the original input and loop over the original dimensions, skipping over the size of watermark image, and overlay the watermark image over the original image and save it to disk</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wm</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">((</span><span class="n">new_mark_width</span><span class="p">,</span> <span class="n">new_mark_width</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">aspect_ratio</span><span class="p">),</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ANTIALIAS</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">wm</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+	<span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">wm</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+		<span class="n">img</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">wm</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">wm</span><span class="p">)</span>
+		<span class="n">img</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">((</span><span class="mi">8000</span><span class="p">,</span>  <span class="mi">8000</span><span class="p">),</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ANTIALIAS</span><span class="p">)</span>
+<span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">'path/to/destination'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The output and input looks like this:</p>
+
+<p><img src="/fastpages_demo/images/original_input.jpeg" alt="original" title="Input Image"></p>
+
+<p><img src="/fastpages_demo/images/original_watermarked.jpg" alt="watermark added" title="Input Image Watermarked"></p>
+
+<p>Now the Oxford IIIT Pets Dataset has a total of 7349 images and looping over all the images on disk to add watermark is going to take a lot of time and memory. But luckily for us Fast.ai has a utility available that takes help of Process based parallelism to take advantage of multiple processors in CPUs, by side-stepping the infamous Python GIL. <code class="highlighter-rouge">parallel</code> in fast.ai core makes the full use of multiple processors to effectively speed up the task. 
+Here I wrap up the watermark logic into a callable object which is then called with the FastAI’s Image ItemList of Oxford Images to iteratively, load each image, add watermark and save watermarked image to disk.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">AddWatermark</span><span class="p">:</span>
+	<span class="k">def</span>  <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path_lr</span><span class="p">,</span> <span class="n">path_hr</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">path_lr</span> <span class="o">=</span> <span class="n">path_lr</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">path_hr</span> <span class="o">=</span> <span class="n">path_hr</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">wm</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="s">'path/to/watermark'</span><span class="p">)</span>
+		<span class="n">mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s">'L'</span><span class="p">)</span><span class="o">.</span><span class="n">point</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span>  <span class="nb">min</span><span class="p">(</span><span class="n">x</span><span class="p">,</span>  <span class="mi">25</span><span class="p">))</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">putalpha</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">mark_width</span><span class="p">,</span>  <span class="bp">self</span><span class="o">.</span><span class="n">mark_height</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">size</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">aspect_ratio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mark_width</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">mark_height</span>
+		
+	<span class="k">def</span>  <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+		<span class="n">dest</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">path_lr</span><span class="o">/</span><span class="n">fn</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path_hr</span><span class="p">)</span>
+		<span class="n">dest</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+		<span class="n">img</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+		<span class="n">targ_sz</span> <span class="o">=</span> <span class="n">resize_to</span><span class="p">(</span><span class="n">img</span><span class="p">,</span>  <span class="mi">128</span><span class="p">,</span> <span class="n">use_min</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+		<span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">targ_sz</span><span class="p">,</span><span class="n">resample</span><span class="o">=</span><span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">BILINEAR</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s">'RGB'</span><span class="p">)</span>
+		<span class="n">main_width</span><span class="p">,</span> <span class="n">main_height</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span>
+		<span class="n">new_mark_width</span> <span class="o">=</span> <span class="n">main_width</span> <span class="o">*</span> <span class="mf">0.25</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">((</span><span class="n">new_mark_width</span><span class="p">,</span> <span class="n">new_mark_width</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">aspect_ratio</span><span class="p">),</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ANTIALIAS</span><span class="p">)</span>
+		<span class="n">tmp_img</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s">'RGB'</span><span class="p">,</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+		<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span>  <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">tmp_img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>  <span class="bp">self</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+			<span class="k">for</span> <span class="n">b</span> <span class="ow">in</span>  <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">tmp_img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>  <span class="bp">self</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+				<span class="n">img</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wm</span><span class="p">,</span>  <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span>  <span class="bp">self</span><span class="o">.</span><span class="n">wm</span><span class="p">)</span>
+				<span class="n">img</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">((</span><span class="mi">8000</span><span class="p">,</span>  <span class="mi">8000</span><span class="p">),</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ANTIALIAS</span><span class="p">)</span>
+		<span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Now call this object with <code class="highlighter-rouge">parallel</code> from FastAI</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parallel</span><span class="p">(</span><span class="n">AddWatermark</span><span class="p">(</span><span class="s">'path/to/input'</span><span class="p">,</span> <span class="s">'path/to/output'</span><span class="p">),</span> <span class="n">il</span><span class="o">.</span><span class="n">items</span><span class="p">)</span>
+</code></pre></div></div>
+<p>This function then parallelizes the process and quickly adds watermark to all the images in dataset.
+Now the input for our model becomes the output image from the previous function (watermark added images) and the target image is the original un-watermarked image.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="Toast Toast--warning googoo"&gt;
+   &lt;span class="Toast-icon"&gt;&lt;svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;
+   &lt;span class="Toast-content"&gt;A lot of images will not be 3 channel RGB images, some would be either only two channels or corrupt; try to keep Image open and resize/convert call in a try-except block.&lt;/span&gt;
+&lt;/div&gt;
+
+</code></pre></div></div>
+
+<h1 id="creating-the-model">
+<a class="anchor" href="#creating-the-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating the Model</h1>
+<p>We are going to use U-Net with pre-trained Resnet34 as the encoder using <code class="highlighter-rouge">unet_learner</code> from FastAI. The idea of this tutorial is to create a working ML application from ideation to production and therefore we’ll skip over a lot of details of implementing a <a href="https://arxiv.org/abs/1505.04597">U-Net</a> (I’ll take it up in next article, where we’ll  implement and train a U-Net from scratch in PyTorch). We’ll implement a flavour of U-Net in <a href="https://docs.fast.ai/vision.models.unet.html">FastAI</a> which allows us to create a U-Net from any backbone trained on ImageNet. We’ll use FastAI’s DataBlock API to create DataLoaders for the FastAI model, specifically <code class="highlighter-rouge">ImageList.from_folder</code> which is then fed to <code class="highlighter-rouge">unet_learner</code> method which gives back a <code class="highlighter-rouge">Learner</code> object.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arch</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">resnet34</span> <span class="c1"># encoder
+</span><span class="n">src</span> <span class="o">=</span> <span class="n">ImageImageList</span><span class="o">.</span><span class="n">from_folder</span><span class="p">(</span><span class="n">path_lr</span><span class="p">)</span><span class="o">.</span><span class="n">split_by_rand_pct</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Define the Image Transform Pipeline, <code class="highlighter-rouge">zoom</code> and Normalize with <code class="highlighter-rouge">imagenet_stats</code>. Keep in mind to keep <code class="highlighter-rouge">tfm_y</code> as <code class="highlighter-rouge">True</code> or you’ll have a mismatch in input and output data fed to the model, with transforms only applied to input data.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span>  <span class="nf">get_data</span><span class="p">(</span><span class="n">bs</span><span class="p">,</span><span class="n">size</span><span class="p">):</span>
+	<span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">src</span><span class="o">.</span><span class="n">label_from_func</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">path_hr</span><span class="o">/</span><span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+	<span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">get_transforms</span><span class="p">(</span><span class="n">max_zoom</span><span class="o">=</span><span class="mf">2.</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">tfm_y</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+	<span class="o">.</span><span class="n">databunch</span><span class="p">(</span><span class="n">bs</span><span class="o">=</span><span class="n">bs</span><span class="p">)</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">imagenet_stats</span><span class="p">,</span> <span class="n">do_y</span><span class="o">=</span><span class="bp">True</span><span class="p">))</span>
+	<span class="n">data</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="mi">3</span>
+	<span class="k">return</span> <span class="n">data</span>
+
+<span class="n">data_gen</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="mi">128</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Finally, initialize the <code class="highlighter-rouge">Learner</code> model with default parameters</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">learn_gen</span> <span class="o">=</span> <span class="n">unet_learner</span><span class="p">(</span><span class="n">data_gen</span><span class="p">,</span> <span class="n">arch</span><span class="p">,</span> <span class="n">wd</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">blur</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">norm_type</span><span class="o">=</span><span class="n">NormType</span><span class="o">.</span><span class="n">Weight</span><span class="p">,</span><span class="n">self_attention</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">y_range</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">3.</span><span class="p">,</span><span class="mf">3.</span><span class="p">),</span> <span class="n">loss_func</span><span class="o">=</span><span class="n">MSELossFlat</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>Note that <code class="highlighter-rouge">MSELossFlat</code> is similar to PyTorch’s <code class="highlighter-rouge">nn.MSELoss</code> but flattens input and target. So, that gives us <code class="highlighter-rouge">Learner</code> object to start model training.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="Toast"&gt;
+   &lt;span class="Toast-icon"&gt;&lt;svg class="octicon octicon-info" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;
+   &lt;span class="Toast-content"&gt;I have created the model with input size fixed at (128, 128), if you have better resources available try an even bigger size 256 or even 512.&lt;/span&gt;
+&lt;/div&gt;
+
+</code></pre></div></div>
+
+<h2 id="training-the-model">
+<a class="anchor" href="#training-the-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training the model</h2>
+
+<p>I trained the model on Google Colab using GPU; I recommend that, the only downside is you might have to juggle between your local machine and Colab to transfer saved model weights etc., unless ofcourse you have NVIDIA Titan or similar ;)</p>
+
+<p>Training models in FastAI is fairly simple and follows the steps:</p>
+<ol>
+  <li>Find the optimal LR using <code class="highlighter-rouge">learn.lr_find</code> which is one of the better ways, if not the best way, of finding LR using <a href="https://arxiv.org/abs/1506.01186">Cyclical Learning Rates</a>. Plot it using ‘learn.recorder.plot()` to decide on an LR (1e-3 works most of the time).</li>
+  <li>Use <code class="highlighter-rouge">learn.fit_one_cycle()</code>, to run the model with frozen pre-trained weights for few epochs. This helps only the later layers of the model to have their parameters updated and let’s you validate if the model is actually learning.</li>
+  <li>Unfreeze all the layers, and use <code class="highlighter-rouge">learn.fit_one_cycle()</code> again, this time with reduced LR.</li>
+</ol>
+
+<p>FastAI basically wraps a lot of best practices for training the model under-the-hood, and let’s you train the model with a very reasonable <code class="highlighter-rouge">val loss</code> for a total of about 5 epochs (2 epochs with frozen weights for pre-trained model and 3 epochs unfrozen). For me, the <code class="highlighter-rouge">train loss</code> and <code class="highlighter-rouge">val loss</code> was down to 0.045 and 0.043 respectively. One of the reason, the loss was low with very few epochs is probably due to the fact that the copyright watermark I’ve added does not add a lot of noise. Again, there’s a lot of work behind the scenes that FastAI does but our objective for this article is to go from idea to production.</p>
+
+<p><img src="/fastpages_demo/images/train.png" alt="Model train"></p>
+
+<p>Once you have the model ready save it to disk, copy it to your local machine in case you trained it on colab.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">learn_gen</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s">'wm_model'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="Toast"&gt;
+   &lt;span class="Toast-icon"&gt;&lt;svg class="octicon octicon-info octicon octicon-info" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;
+   &lt;span class="Toast-content"&gt;Note that `learn_gen.save` won't work in case you want to run inference on your local machine but use `learn_gen.export` instead.&lt;/span&gt;
+&lt;/div&gt;
+
+</code></pre></div></div>
+
+<h2 id="checking-model-performance">
+<a class="anchor" href="#checking-model-performance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Checking model performance</h2>
+
+<p>Once you are done training, it’s time to check how the model is performing on new images. We’ll first load the learner object from <code class="highlighter-rouge">fastai</code> and put the model in <code class="highlighter-rouge">eval</code> mode:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">learner</span> <span class="o">=</span> <span class="n">load_learner</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s">'path'</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="s">'wm_remove.pkl'</span><span class="p">)</span>
+<span class="n">learner</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="nb">eval</span><span class="p">()</span>
+</code></pre></div></div>
+<p>Load the image, preprocess it as per model’s input and score it through the model</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">img</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="s">'path/to/image.jpg'</span><span class="p">)</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">),</span> <span class="n">resample</span><span class="o">=</span><span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">BILINEAR</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s">'RGB'</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="mi">255</span> <span class="c1"># pytorch dim
+</span><span class="n">img</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">prediction</span> <span class="o">=</span> <span class="n">learner</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">img</span><span class="p">))</span>
+</code></pre></div></div>
+<p>Note that the learner object, when predicting a single image, expects the images to be of type <code class="highlighter-rouge">fastai.vision.image.Image</code>, which in turn accepts a NumPy array.</p>
+
+<p>Here are the input and output images</p>
+
+<p><img src="/fastpages_demo/images/watermark_added.jpg" alt="watermark added" title="Input Image to Model">
+<img src="/fastpages_demo/images/output.jpg" alt="Watermark removed from model" title="Output Image"></p>
+
+<p>The model actually performs well and is able to remove alpha channel watermark with a good precision.</p>
+
+<h2 id="creating-a-web-app">
+<a class="anchor" href="#creating-a-web-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating a web app</h2>
+
+<p>Deploying ML is one of the most talked about and yet the least explored part of the overall pipeline. One which is either dependent on separate deployment team after you’ve container-ised your app, or as a batch job which gets called by a cron job at a specified time. Either way, this takes away a lot of ownership and creates a void in the feedback loop of an ML monitoring systems, which is, at least as important as training lifecycle, if not more. Data driven apps require a robust feedback loop to quickly identify falling model performace and implement quick iterations to re-train models in production.
+This part is one of the most exciting part, getting your trained model to produce results and expose it as an API. Exciting because it lets you use the model as a service, and, of course, you can design a useful front-end to make it look inviting. I’ll be using Flask to create a simple interface to interact with your app.</p>
+
+<p>The interface will be created keeping in mind the requirements of our app. Also, I have minimal exposure to the front end and please excuse any noob error you find. 
+At the very least, our app should have, at the front-end:
+A. Upload feature to upload image.
+B. An option to add watermark after uploading, if the user chooses to do so.
+C. Download the watermark removed images, after running through the model.</p>
+
+<p>And at the working end:
+A. Simple data validations, to check input image conformance to the model.
+B. Input image transformations.
+C. Logging model metrics, which can be used to detect any fall in model performance.</p>
+
+<p>Let’s start with defining the project structure under <code class="highlighter-rouge">web deploy</code> folder</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── __init__.py
+├──	api.py
+├── static
+│   ├── temp1.jpeg
+│   └── temp2.jpeg
+│   └── watermark.png
+├── templates
+│   ├── add_watermark.html
+│   └── index.html
+│   └── output.html
+</code></pre></div></div>
+
+<p>Where <code class="highlighter-rouge">api.py</code> is for defining the Flask App and other functions at the working end of our app. <code class="highlighter-rouge">static</code> will hold watermark needed to be added and other intermediate output from the model. <code class="highlighter-rouge">templates</code> will hold templates to render. In <code class="highlighter-rouge">api.py</code> script, let’s define method for loading the trained model</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">load_model</span><span class="p">():</span>
+    <span class="c1"># Define model
+</span>    <span class="k">global</span> <span class="n">model</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">load_learner</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s">'../../models/'</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="s">'wm_remove.pkl'</span><span class="p">)</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="nb">eval</span><span class="p">()</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'Error Loading model, check model'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The method is self-explanatory, except for <code class="highlighter-rouge">model</code> variable definition as global, which is required to make it available globally. Let’s then define a <code class="highlighter-rouge">prepare_image</code> which will be called after the user has uploaded an image, to prepare image for running inference with the model. This basically does the same steps as we used while checking the model performance</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">prepare_image</span><span class="p">(</span><span class="n">image_path</span><span class="p">):</span>
+    <span class="n">imsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">imsize</span><span class="p">,</span> <span class="n">resample</span><span class="o">=</span><span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">BILINEAR</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s">'RGB'</span><span class="p">),</span>
+                                 <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="mi">255</span> <span class="c1"># pytorch dim
+</span>    <span class="n">img</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Image</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Coming to the front-end part, we’ll define a simple index.html with an upload option and a couple other options of adding watermark and removing watermark.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;title&gt;</span>Image Watermark removal model as a Flask API<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Image Watermark removal: UNet with ResNet34 Encoder Model<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/prediction"</span> <span class="na">method=</span><span class="s">"post"</span> <span class="na">enctype=</span><span class="s">"multipart/form-data"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"image"</span> <span class="na">value=</span><span class="s">"Upload"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Predict"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/addwatermark"</span> <span class="na">method=</span><span class="s">"post"</span> <span class="na">enctype=</span><span class="s">"multipart/form-data"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"image"</span> <span class="na">value=</span><span class="s">"Upload"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Add Watermark"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/form&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div></div>
+<p>The rest of the templates, <code class="highlighter-rouge">add watermark.html</code> and <code class="highlighter-rouge">output.html</code> have similar structure, except it shows the additional output in each case.
+ In the <code class="highlighter-rouge">add_watermark</code> method we’ll add watermark and render template which shows original and watermark added image, recall the watermark logic we defined before:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">@</span><span class="n">app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/addwatermark"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">add_watermark</span><span class="p">():</span>
+    <span class="c1"># Ensure an image was properly uploaded to our endpoint.
+</span>    <span class="k">if</span> <span class="n">flask</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">"POST"</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">flask</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"image"</span><span class="p">):</span>
+            <span class="c1"># Read the image in PIL format
+</span>            <span class="n">f</span> <span class="o">=</span> <span class="n">flask</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="p">[</span><span class="s">"image"</span><span class="p">]</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">'static/input.jpeg'</span><span class="p">))</span>  <span class="c1"># save file to disk
+</span>
+            <span class="c1"># add watermark logic
+</span>            <span class="n">main</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+            <span class="n">mark</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="s">'static/pngkit_copyright-symbol-png_185408.png'</span><span class="p">)</span>
+            <span class="n">mask</span> <span class="o">=</span> <span class="n">mark</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s">'L'</span><span class="p">)</span><span class="o">.</span><span class="n">point</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">min</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">25</span><span class="p">))</span>
+            <span class="n">mark</span><span class="o">.</span><span class="n">putalpha</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+            <span class="n">mark_width</span><span class="p">,</span> <span class="n">mark_height</span> <span class="o">=</span> <span class="n">mark</span><span class="o">.</span><span class="n">size</span>
+            <span class="n">main_width</span><span class="p">,</span> <span class="n">main_height</span> <span class="o">=</span> <span class="n">main</span><span class="o">.</span><span class="n">size</span>
+            <span class="n">aspect_ratio</span> <span class="o">=</span> <span class="n">mark_width</span> <span class="o">/</span> <span class="n">mark_height</span>
+            <span class="n">new_mark_width</span> <span class="o">=</span> <span class="n">main_width</span> <span class="o">*</span> <span class="mf">0.25</span>
+            <span class="n">mark</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">((</span><span class="n">new_mark_width</span><span class="p">,</span> <span class="n">new_mark_width</span> <span class="o">/</span> <span class="n">aspect_ratio</span><span class="p">),</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ANTIALIAS</span><span class="p">)</span>
+
+            <span class="n">tmp_img</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s">'RGB'</span><span class="p">,</span> <span class="n">main</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">tmp_img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mark</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">tmp_img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">mark</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+                    <span class="n">main</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">mark</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="n">mark</span><span class="p">)</span>
+                    <span class="n">main</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">((</span><span class="mi">8000</span><span class="p">,</span> <span class="mi">8000</span><span class="p">),</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">ANTIALIAS</span><span class="p">)</span>
+            <span class="n">main</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">'static/watermark_added.jpg'</span><span class="p">,</span> <span class="n">quality</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># save watermarked file
+</span>
+
+            <span class="c1"># Return the prediction to HTML Template
+</span>            <span class="k">return</span> <span class="n">flask</span><span class="o">.</span><span class="n">render_template</span><span class="p">(</span><span class="s">"add_watermark.html"</span><span class="p">)</span>
+</code></pre></div></div>
+<p>When you click <code class="highlighter-rouge">predict</code>, it calls <code class="highlighter-rouge">html_predict</code> which saves the generated output and then the watermark template renders it.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">@</span><span class="n">app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/prediction"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">html_predict</span><span class="p">():</span>
+
+    <span class="c1"># Ensure an image was properly uploaded to our endpoint.
+</span>    <span class="k">if</span> <span class="n">flask</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">"POST"</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">flask</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">flask</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"image"</span><span class="p">):</span>
+            <span class="c1"># Read the image in PIL format
+</span>            <span class="n">f</span> <span class="o">=</span> <span class="n">flask</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="p">[</span><span class="s">"image"</span><span class="p">]</span>
+
+            <span class="c1"># Preprocess the image and prepare it for classification.
+</span>            <span class="n">image</span> <span class="o">=</span> <span class="n">prepare_image</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+            <span class="n">prediction</span> <span class="o">=</span> <span class="n">learner</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+            <span class="c1"># Classify the input image and then initialize the list of predictions to return to the client.
+</span>            <span class="n">im</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">((</span><span class="n">prediction</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">transpose</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span><span class="o">*</span><span class="mi">255</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">))</span>
+            <span class="n">im</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">'static/output.jpg'</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">flask</span><span class="o">.</span><span class="n">render_template</span><span class="p">(</span><span class="s">"output.html"</span><span class="p">)</span>
+</code></pre></div></div>
+<p>I also defined a <code class="highlighter-rouge">/predict</code> route for raw JSON responses.
+Finally add the <code class="highlighter-rouge">app.run()</code> and optionally add <code class="highlighter-rouge">debug=True</code> to debug errors which you might run into while running for the first time.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Loading PyTorch model and starting server."</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Please wait until server has fully started..."</span><span class="p">)</span>
+    <span class="n">load_model</span><span class="p">()</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div></div>
+<p>Run the app from command line <code class="highlighter-rouge">python api.py</code> and you are good to go. By default the app opens up on <code class="highlighter-rouge">localhost:5000</code>.</p>
+
+<h1 id="concluding-note">
+<a class="anchor" href="#concluding-note" aria-hidden="true"><span class="octicon octicon-link"></span></a>Concluding Note</h1>
+<p>In this article we breifly glanced through all the requisites for a data driven app from ideation to production. I skipped over a lot many details, U-Net architecture, model training iterations, serving challenges, model monitoring/logging etc. but gave you an idea of what it takes to do it. Use this idea in your own app and share it with everyone. Also, feel free to point out any errors you find in the implementation.</p>
+
+  </div><a class="u-url" href="/fastpages_demo/markdown/2020/06/28/Watermark-removal-app.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages_demo/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/fastpages_demo/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages_demo/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>I write about all things Machine Learning/Data Science.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/harshit-py" title="harshit-py"><svg class="svg-icon grey"><use xlink:href="/fastpages_demo/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/__harshit1__" title="__harshit1__"><svg class="svg-icon grey"><use xlink:href="/fastpages_demo/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
