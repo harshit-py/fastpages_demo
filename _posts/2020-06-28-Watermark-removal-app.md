@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: A complete tutorial of building an ML application that helps you remove watermarks.
-categories: [markdown]
+categories: [fastai, unet, pytorch, computer vision]
 title: Going from idea to a Data driven Application
 ---
 
